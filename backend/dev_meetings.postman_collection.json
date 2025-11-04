@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "a148cd7b-0b50-47ab-a9f9-a44472ae3754",
+		"name": "dev_meetings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47996150",
+		"_collection_link": "https://lyubimov99-9644166.postman.co/workspace/Pavel-Porin's-Workspace~0942365d-3ecf-4286-81dd-312275d01d08/collection/47996150-a148cd7b-0b50-47ab-a9f9-a44472ae3754?action=share&source=collection_link&creator=47996150"
+	},
+	"item": [
+		{
+			"name": "get all teams",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/teams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "meeting per team",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/meetings/by-team/bf65ad10-b94f-11f0-983b-5a8aa6089220",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"meetings",
+						"by-team",
+						"bf65ad10-b94f-11f0-983b-5a8aa6089220"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create meeting",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"teemsId\": \"bf65a536-b94f-11f0-983b-5a8aa6089220\",\n  \"startDate\": \"2025-11-10T09:00:00\",\n  \"endDate\": \"2025-11-10T10:00:00\",\n  \"description\": \"Weekly sync meeting\",\n  \"room\": \"New York Room\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/meetings/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"meetings",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
